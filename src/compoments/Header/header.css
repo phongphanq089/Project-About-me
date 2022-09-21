@@ -1,0 +1,90 @@
+header {
+     height: 120vh;
+     overflow: hidden;
+     position: relative;
+     background: url(../../accsets/banner-bg.png);
+}
+.left-h{
+     flex: 1;
+     position: absolute;
+     top: 4rem;
+     left: 4rem;
+     
+}
+.header_container{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.about-me .button-btn{
+     padding: 0.5rem 1rem;
+     background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+     border: 1px solid var(--color-white);
+     font-size: 1rem;
+     border-radius: 5px;
+     color: var(--color-white);
+}
+.CTA{
+     display: flex;
+     gap: 1rem;
+     margin: 1rem 0;
+}
+.scrolldown{
+     display: flex;
+     gap: 1rem;
+     align-items: center; 
+     padding: 3rem 0;
+    
+}
+
+.icon{
+     font-size: 3rem;
+}
+
+.header_social{
+     display: flex;
+     gap: 2rem;
+     font-size: 2rem;
+     position: absolute;
+     bottom: 3rem;
+     right: -29rem;
+}
+
+
+
+
+.right-h {
+   flex: 1;
+    position: absolute;
+    right: 4rem;
+    top: 4rem;
+}
+
+/* ======= image ME ====== */
+.me{
+     width: 20rem;
+     height: 40rem;
+     border-radius: 50%;
+     margin: auto;
+     transition: 4s linear;
+     animation: updown 4s linear infinite;
+}
+.me img {
+     border-radius: 50%;
+}
+
+
+@keyframes updown {
+     0% {
+          transform: translateY(0rem);
+     }
+     20% {
+          transform: translateY(-1rem);
+     }
+     35% {
+          transform: translateY(-2rem);
+     }
+     100% {
+          transform: translateY(0);
+     }
+}
