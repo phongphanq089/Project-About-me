@@ -1,0 +1,127 @@
+@use "../../scss/" as *;
+
+header {
+  height: 110vh;
+  overflow: hidden;
+  position: relative;
+  background: url(../../accsets/banner-bg.png);
+  clip-path: polygon(0 0, 100% 0%, 100% 89%, 49% 100%, 0% 90%);
+  box-shadow: rgb(175, 18, 214) 0px 20px 30px -10px;
+}
+
+.header_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .left-h {
+      flex: 2;
+      position: absolute;
+      top: 10rem;
+      left: 4rem;
+      .about-me .button-btn {
+        padding: 0.5rem 1rem;
+        background: radial-gradient(
+          circle,
+          rgba(63, 94, 251, 1) 0%,
+          rgba(252, 70, 107, 1) 100%
+        );
+        border: 1px solid var(--color-white);
+        font-size: 1rem;
+        border-radius: 5px;
+        color: var(--color-white);
+      }
+      .CTA {
+        display: flex;
+        gap: 1rem;
+        margin: 1rem 0;
+      }
+      .scrolldown {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+        .icon {
+          font-size: 3rem;
+        }
+      }
+    }
+    /* ======= image ME ====== */
+
+    .right-h {
+      flex: 1;
+      position: absolute;
+      right: 10rem;
+      top: 7rem;
+      display: flex;
+      flex-direction: column;
+      .me {
+        width: 25rem;
+        height: 40rem;
+        border-radius: 50%;
+        margin: auto;
+        transition: 4s linear;
+        animation: updown 4s linear infinite;
+        img {
+          border-radius: 50%;
+        }
+      }
+      .header_social {
+        display: flex;
+        gap: 2rem;
+        font-size: 2rem;
+        position: absolute;
+        bottom: 10rem;
+        right: 2rem;
+      }
+    }
+  }
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(0rem);
+  }
+
+  20% {
+    transform: translateY(-1rem);
+  }
+
+  35% {
+    transform: translateY(-2rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+// ===== media tablet pro ===== ///////
+@media (min-width: 1024px) and (max-width: 1336px) {
+  header {
+    height: 60vh;
+
+    .me {
+      img {
+        width: 20rem;
+        object-fit: cover;
+        position: absolute;
+        right: 1rem;
+        top: 3rem;
+      }
+    }
+  }
+}
+
+// ===== media tablet small ==== ///
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  header {
+    height: 70vh;
+  }
+}

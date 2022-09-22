@@ -1,0 +1,94 @@
+@use "./scss/" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Dangrek&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: "Dangrek", cursive;
+  outline: none;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+body {
+  background: $color-bg;
+  color: $color-white;
+  /* background: url(../src/accsets/banner-bg.png);
+     background-size: cover; */
+}
+
+/* ==========GENERAL STYLE  ======== */
+.container {
+  width: $content-width-lg;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500;
+}
+
+section {
+  margin-top: 8rem;
+}
+
+section > h2,
+section > h5 {
+  text-align: center;
+  color: $color-light;
+}
+section > h2 {
+  color: $color-primary;
+  margin-bottom: 3rem;
+}
+
+.text-alight {
+  color: $color-light;
+}
+a {
+  color: $color-primary;
+  transition: $transition;
+}
+
+a:hover {
+  color: $color-white;
+}
+
+.btn {
+  width: max-content;
+  display: inline-block;
+  color: $color-primary;
+  padding: 0.7rem 1.3rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: 1px solid $color-primary;
+  transition: $transition;
+}
+
+.bnt:hover {
+  background-color: $color-white;
+  color: $color-bg;
+  border-color: transparent;
+}
+.btn-primary {
+  background: $color-primary;
+  color: $color-bg;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}

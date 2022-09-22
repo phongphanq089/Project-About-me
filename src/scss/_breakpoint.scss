@@ -1,0 +1,25 @@
+@use "./variables" as *;
+
+//=======MObile ============///
+@mixin mobile {
+  @media only screen and (max-width: 600px) {
+    .container {
+      width: $content-width-ms;
+    }
+    section {
+      margin-top: 2rem;
+    }
+  }
+}
+/* reponsive tablet medium  devices */
+@mixin tablet {
+  @media only screen and (max-width: 1024px) {
+    .container {
+      width: $content-width-md;
+    }
+
+    section {
+      margin-top: 6rem;
+    }
+  }
+}

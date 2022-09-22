@@ -1,9 +1,9 @@
 import React from 'react'
-import "./portfolio.css"
-const Portfolio  = () => {
+import "./portfolio.scss"
+const Portfolio = () => {
   return (
     <div>
-      Portfolio 
+      Portfolio
     </div>
   )
 }
