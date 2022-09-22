@@ -1,27 +1,37 @@
-import React from 'react'
-import { AiOutlineHome, AiOutlineMail } from "react-icons/ai"
-import { BsFillPeopleFill, BsFillJournalBookmarkFill, BsBookmarkHeartFill } from 'react-icons/bs'
+import React, { useRef } from 'react'
+import { AiOutlineMenuFold ,AiOutlineClose} from "react-icons/ai"
 import logo from "../../accsets/logo_dev.jpg"
+import {Link} from "react-scroll"
 import "./navbar.scss"
 const Navar = () => {
+    //reposive menu
+    const navRef = useRef()
+     const showNavbar = () => {
+        navRef.current.classList.toggle("reponsive_nav")
+     }
+
     window.addEventListener("scroll", () => {
         const header = document.querySelector(".Nav_bar")
         header.classList.toggle("active", window.scrollY > 100)
     })
 
     return (
-        <div className='Nav_bar'>
+        <div className='Nav_bar' >
             <div className="navbar_menu">
                 <div className="logo">
                     <img src={logo} alt="LOGO" />
                 </div>
-                <div className="list_menu">
-                    <h2 className='home'><AiOutlineHome /></h2>
-                    <h2 className='about'><BsFillPeopleFill /></h2>
-                    <h2 className='my_experience' ><BsFillJournalBookmarkFill /></h2>
-                    <h2 className='my_service'><BsBookmarkHeartFill /></h2>
-                    <div className='contact_me '>LET CONTACT <i><AiOutlineMail /></i></div>
+
+                <div className="list_menu" ref={navRef}>
+                    <h2 className='home'><Link to='/' span={true} smooth ={true}>HOME</Link></h2>
+                    <h2 className='about'>ABOUT ME</h2>
+                    <h2 className='my_experience' ><Link to='experience' span={true} smooth ={true}>MY EXPERIENCE</Link></h2>
+                    <h2 className='my_service'>MY SERVICE</h2>
+                    <div className='contact_me '>LET CONTACT </div>
+                    <div className='closeMenu' onClick={showNavbar}><AiOutlineClose/></div>
                 </div>
+                <div className='menuNabar' onClick={showNavbar}><AiOutlineMenuFold/></div> 
+                
             </div>
         </div>
     )

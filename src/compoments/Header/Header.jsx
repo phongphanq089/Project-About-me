@@ -8,9 +8,10 @@ import HeaderSociel from './headerSociel'
 import Typical from "react-typical"
 const Header = () => {
   return (
-    <header>
-      <Navar />
-      <div className="container header_container">
+    <>
+    <Navar/>
+    <header id='/'>
+      <div className="container header_container" >
         <div className="content">
           {/* left */}
           <div className="left-h">
@@ -32,7 +33,7 @@ const Header = () => {
               </h1>
               <p className='text text-alight'>When I was 16 years old, my father told me to do whatever  <br />you want with your life. And to become anything you have to <br />work really hard. That's why
                 when I die, I want
-                people to remember<br /> me for the life I lived,
+                people to remember me for the life I lived,
                 not the money I've earned.</p>
               <Cta />
 
@@ -52,6 +53,8 @@ const Header = () => {
         </div>
       </div>
     </header>
+    </>
+    
   )
 }
 

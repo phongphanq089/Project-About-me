@@ -1,7 +1,7 @@
 @use "../../scss/" as *;
 
 header {
-  height: 110vh;
+  height: 120vh;
   overflow: hidden;
   position: relative;
   background: url(../../accsets/banner-bg.png);
@@ -102,10 +102,14 @@ header {
 }
 
 // ===== media tablet pro ===== ///////
-@media (min-width: 1024px) and (max-width: 1336px) {
+@media screen and (min-width: 1366px) {
+  header{
+    height: 70vh;
+  }
+}
+@media  (max-width: 1200px) and (max-width: 1366px) {
   header {
     height: 60vh;
-
     .me {
       img {
         width: 20rem;
@@ -120,8 +124,177 @@ header {
 
 // ===== media tablet small ==== ///
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   header {
-    height: 70vh;
+    height: 120vh;
+
+    .header_container{
+       .content{
+         
+        .left-h{
+          position: absolute;
+           transform: translateY(30rem);
+           left: 20%;
+
+           .about-me{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .text{
+              text-align: center;
+            }
+
+            .scrolldown{
+              position: absolute;
+             right: -11rem;
+             flex-direction: column;
+             top: -26rem;
+              .scroll_down{
+                transform: rotate(90deg);
+                margin-bottom: 4rem;
+                font-size: 1.5rem;
+              }
+            }
+           }
+          
+        }
+
+         .right-h{
+          position: absolute;
+          top: 6rem;
+          left: 20%;
+          .header_social {
+            position: absolute;
+            left: 20%;
+          }
+
+          .me {
+            border-radius: 12rem 12rem 0 0;
+
+            img {
+              border-radius: 12rem 12rem 0 0;
+            }
+          }
+         }
+       }
+    }
   }
 }
+@media screen and (max-width: 768px)  {
+  header {
+    height: 150vh;
+
+    .header_container{
+       .content{
+         
+        .left-h{
+          position: absolute;
+           transform: translateY(30rem);
+           left: 15%;
+
+           .about-me{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .text{
+              text-align: center;
+            }
+
+            .scrolldown{
+              position: absolute;
+             right: -5rem;
+             flex-direction: column;
+             top: -23rem;
+              .scroll_down{
+                transform: rotate(90deg);
+                margin-bottom: 3rem;
+                font-size: 1.5rem;
+              }
+            }
+           }
+          
+        }
+       .right-h{
+        .me{
+          border-radius: 12rem 12rem 0 0;
+
+          img {
+            border-radius: 12rem 12rem 0 0;
+          }
+        }
+       }
+         
+       }
+    }
+  }
+}
+// ==== man hinh mobile ====///
+
+@media screen and (max-width: 420px) {
+    header{
+      height: 120vh;
+      .header_container{
+        .content{
+         .left-h{
+           
+           position: absolute;
+            transform: translateY(25rem);
+            left: 15%;
+            
+            .about-me{
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+             font-size: x-small;
+             .text{
+               text-align: center;
+             }
+ 
+             .scrolldown{
+              position: absolute;
+              left: -4rem;
+              
+              top: 20rem;
+               .scroll_down{
+                transform: rotate(360deg);
+                 margin-bottom: 4rem;
+                 font-size: 1.5rem;
+               }
+             }
+            }
+           
+         }
+         .right-h{
+          position: absolute;
+          top: 4rem;
+          right: 1.5rem;
+          
+          .header_social {
+            position: absolute;
+            right: 4rem;
+            font-size: 1rem;
+            top: 25rem;
+          }
+
+          .me {
+            border-radius: 12rem 12rem 0 0;
+            width: 5rem ;
+            
+           
+            img {
+              border-radius: 12rem 12rem 0 0;
+              
+            }
+          }
+         }
+        }
+    }
+    }
+}
+
+
