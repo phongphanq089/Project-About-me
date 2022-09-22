@@ -234,16 +234,16 @@ header {
 }
 // ==== man hinh mobile ====///
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 415px) {
     header{
-      height: 120vh;
+      height: 140vh;
       .header_container{
         .content{
          .left-h{
            
            position: absolute;
-            transform: translateY(25rem);
-            left: 15%;
+            transform: translateY(23rem);
+            left: 1%;
             
             .about-me{
              display: flex;
@@ -257,9 +257,9 @@ header {
  
              .scrolldown{
               position: absolute;
-              left: -4rem;
+              left: -6rem;
               
-              top: 20rem;
+              top: 18rem;
                .scroll_down{
                 transform: rotate(360deg);
                  margin-bottom: 4rem;
@@ -297,4 +297,57 @@ header {
     }
 }
 
+@media screen and (max-width: 376px) {
+  header{
+    height: 130vh;
+    .header_container{
+      .content{
 
+       .left-h{
+         position: absolute;
+          transform: translateY(22rem);
+          left: 1%;
+          
+          .about-me{
+          
+           .scrolldown{
+            position: absolute;
+            left: -6rem;
+            
+            top: 17rem;
+             .scroll_down{
+              transform: rotate(360deg);
+               margin-bottom: 4rem;
+               font-size: 1.5rem;
+             }
+           }
+          }
+         
+       }
+       .right-h{
+        position: absolute;
+        top: 4rem;
+        right: 0.8rem;
+        
+        .header_social {
+          position: absolute;
+          right: 4rem;
+          font-size: 1rem;
+          top: 25rem;
+        }
+
+        .me {
+          border-radius: 12rem 12rem 0 0;
+          width: 5rem ;
+          
+         
+          img {
+            border-radius: 12rem 12rem 0 0;
+            
+          }
+        }
+       }
+      }
+  }
+  }
+}
