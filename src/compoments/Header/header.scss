@@ -103,11 +103,11 @@ header {
 
 // ===== media tablet pro ===== ///////
 @media screen and (min-width: 1366px) {
-  header{
-    height: 70vh;
+  header {
+    height: 120vh;
   }
 }
-@media  (max-width: 1200px) and (max-width: 1366px) {
+@media (max-width: 1200px) and (max-width: 1366px) {
   header {
     height: 60vh;
     .me {
@@ -128,40 +128,38 @@ header {
   header {
     height: 120vh;
 
-    .header_container{
-       .content{
-         
-        .left-h{
+    .header_container {
+      .content {
+        .left-h {
           position: absolute;
-           transform: translateY(30rem);
-           left: 20%;
+          transform: translateY(30rem);
+          left: 20%;
 
-           .about-me{
+          .about-me {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
 
-            .text{
+            .text {
               text-align: center;
             }
 
-            .scrolldown{
+            .scrolldown {
               position: absolute;
-             right: -11rem;
-             flex-direction: column;
-             top: -26rem;
-              .scroll_down{
+              right: -11rem;
+              flex-direction: column;
+              top: -26rem;
+              .scroll_down {
                 transform: rotate(90deg);
                 margin-bottom: 4rem;
                 font-size: 1.5rem;
               }
             }
-           }
-          
+          }
         }
 
-         .right-h{
+        .right-h {
           position: absolute;
           top: 6rem;
           left: 20%;
@@ -177,103 +175,98 @@ header {
               border-radius: 12rem 12rem 0 0;
             }
           }
-         }
-       }
+        }
+      }
     }
   }
 }
-@media screen and (max-width: 768px)  {
+@media screen and (max-width: 768px) {
   header {
     height: 150vh;
 
-    .header_container{
-       .content{
-         
-        .left-h{
+    .header_container {
+      .content {
+        .left-h {
           position: absolute;
-           transform: translateY(30rem);
-           left: 15%;
+          transform: translateY(30rem);
+          left: 15%;
 
-           .about-me{
+          .about-me {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
 
-            .text{
+            .text {
               text-align: center;
             }
 
-            .scrolldown{
+            .scrolldown {
               position: absolute;
-             right: -5rem;
-             flex-direction: column;
-             top: -23rem;
-              .scroll_down{
+              right: -5rem;
+              flex-direction: column;
+              top: -23rem;
+              .scroll_down {
                 transform: rotate(90deg);
                 margin-bottom: 3rem;
                 font-size: 1.5rem;
               }
             }
-           }
-          
-        }
-       .right-h{
-        .me{
-          border-radius: 12rem 12rem 0 0;
-
-          img {
-            border-radius: 12rem 12rem 0 0;
           }
         }
-       }
-         
-       }
+        .right-h {
+          .me {
+            border-radius: 12rem 12rem 0 0;
+
+            img {
+              border-radius: 12rem 12rem 0 0;
+            }
+          }
+        }
+      }
     }
   }
 }
 // ==== man hinh mobile ====///
 
 @media screen and (max-width: 415px) {
-    header{
-      height: 140vh;
-      .header_container{
-        .content{
-         .left-h{
-           
-           position: absolute;
-            transform: translateY(23rem);
-            left: 1%;
-            
-            .about-me{
-             display: flex;
-             flex-direction: column;
-             justify-content: center;
-             align-items: center;
-             font-size: x-small;
-             .text{
-               text-align: center;
-             }
- 
-             .scrolldown{
+  header {
+    height: 140vh;
+    .header_container {
+      .content {
+        .left-h {
+          position: absolute;
+          transform: translateY(23rem);
+          left: 1%;
+
+          .about-me {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: x-small;
+            .text {
+              text-align: center;
+            }
+
+            .scrolldown {
               position: absolute;
               left: -6rem;
-              
+
               top: 18rem;
-               .scroll_down{
+              .scroll_down {
                 transform: rotate(360deg);
-                 margin-bottom: 4rem;
-                 font-size: 1.5rem;
-               }
-             }
+                margin-bottom: 4rem;
+                font-size: 1.5rem;
+              }
             }
-           
-         }
-         .right-h{
+          }
+        }
+        .right-h {
           position: absolute;
           top: 4rem;
           right: 1.5rem;
-          
+
           .header_social {
             position: absolute;
             right: 4rem;
@@ -283,71 +276,64 @@ header {
 
           .me {
             border-radius: 12rem 12rem 0 0;
-            width: 5rem ;
-            
-           
+            width: 5rem;
+
             img {
               border-radius: 12rem 12rem 0 0;
-              
             }
           }
-         }
         }
+      }
     }
-    }
+  }
 }
 
 @media screen and (max-width: 376px) {
-  header{
+  header {
     height: 130vh;
-    .header_container{
-      .content{
-
-       .left-h{
-         position: absolute;
+    .header_container {
+      .content {
+        .left-h {
+          position: absolute;
           transform: translateY(22rem);
           left: 1%;
-          
-          .about-me{
-          
-           .scrolldown{
-            position: absolute;
-            left: -6rem;
-            
-            top: 17rem;
-             .scroll_down{
-              transform: rotate(360deg);
-               margin-bottom: 4rem;
-               font-size: 1.5rem;
-             }
-           }
-          }
-         
-       }
-       .right-h{
-        position: absolute;
-        top: 4rem;
-        right: 0.8rem;
-        
-        .header_social {
-          position: absolute;
-          right: 4rem;
-          font-size: 1rem;
-          top: 25rem;
-        }
 
-        .me {
-          border-radius: 12rem 12rem 0 0;
-          width: 5rem ;
-          
-         
-          img {
-            border-radius: 12rem 12rem 0 0;
-            
+          .about-me {
+            .scrolldown {
+              position: absolute;
+              left: -6rem;
+
+              top: 17rem;
+              .scroll_down {
+                transform: rotate(360deg);
+                margin-bottom: 4rem;
+                font-size: 1.5rem;
+              }
+            }
           }
         }
-       }
+        .right-h {
+          position: absolute;
+          top: 4rem;
+          right: 0.8rem;
+
+          .header_social {
+            position: absolute;
+            right: 4rem;
+            font-size: 1rem;
+            top: 25rem;
+          }
+
+          .me {
+            border-radius: 12rem 12rem 0 0;
+            width: 5rem;
+
+            img {
+              border-radius: 12rem 12rem 0 0;
+            }
+          }
+        }
       }
-  }
+    }
   }
 }

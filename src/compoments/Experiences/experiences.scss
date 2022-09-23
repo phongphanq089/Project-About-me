@@ -1,4 +1,61 @@
-.Experience{
-     
-     height: 100vh;
+@use "../../scss/" as *;
+
+.experiences__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+
+  > div {
+    background-color: $color-bg-variant;
+    padding: 2rem 3rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+
+    @include tablet {
+      width: 80%;
+      padding: 2rem;
+      margin: auto;
+    }
+    @include mobile {
+      font-size: x-small;
+      padding: 1rem 2rem;
+    }
+
+    &:hover {
+      background-color: transparent;
+      border-color: $color-primary-variant;
+      cursor: default;
+    }
+
+    h3 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: $color-primary;
+    }
+  }
+  .experiences_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+    .experiences-detail {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      @include mobile {
+        gap: 1rem;
+      }
+      .detail-icon {
+        font-size: 1rem;
+        color: $color-primary;
+      }
+    }
+  }
 }

@@ -1,0 +1,112 @@
+@use "../../scss/" as *;
+section {
+  height: 100vh;
+
+  @include tablet {
+    height: 150vh;
+  }
+  @include mobile {
+    height: 160vh;
+  }
+}
+.about__container {
+  display: grid;
+  grid-template-columns: 35% 50%;
+  gap: 15%;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+
+  .about__me {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+    background: linear-gradient(
+      45deg,
+      transparent,
+      $color-primary,
+      transparent
+    );
+    display: grid;
+    place-items: center;
+    .about__me-img {
+      border-radius: 2rem;
+      overflow: hidden;
+      transform: rotate(10deg);
+      transition: $transition;
+      &:hover {
+        transform: rotate(0deg);
+      }
+    }
+
+    @include tablet {
+      width: 50%;
+      margin: 2rem auto 0.5rem;
+    }
+    @include mobile {
+      width: 65%;
+      margin: auto;
+    }
+  }
+
+  // content about
+  .about__content {
+    .about__carts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      @include mobile {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      .about_cart {
+        background: $color-bg-variant;
+        border-radius: 1rem;
+        padding: 2rem;
+        border: 1px solid transparent;
+        text-align: center;
+
+        &:hover {
+          background-color: transparent;
+          border-color: $color-primary-variant;
+          cursor: default;
+        }
+
+        .fa-icon {
+          color: $color-primary;
+          font-size: 1.4rem;
+          margin-bottom: 1rem;
+        }
+        h5 {
+          font-size: 1rem;
+        }
+        small {
+          font-size: 0.7em;
+          color: $color-light;
+        }
+      }
+    }
+    p {
+      margin: 2rem 0.95rem;
+      font-size: 0.8rem;
+      color: $color-light;
+
+      @include mobile {
+        margin: 1.5rem 0;
+      }
+    }
+
+    h3 {
+      @include tablet {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    @include mobile {
+      text-align: center;
+    }
+  }
+}

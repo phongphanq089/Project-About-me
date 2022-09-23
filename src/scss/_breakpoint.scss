@@ -9,6 +9,7 @@
     section {
       margin-top: 2rem;
     }
+    @content;
   }
 }
 /* reponsive tablet medium  devices */
@@ -21,7 +22,6 @@
     section {
       margin-top: 6rem;
     }
+    @content;
   }
 }
-
-

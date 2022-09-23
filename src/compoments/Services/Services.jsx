@@ -2,7 +2,7 @@ import React from 'react'
 import "./services.scss"
 const Services = () => {
   return (
-    <div>
+    <div className='my_servieces' id='servieces'>
       Services
     </div>
   )
