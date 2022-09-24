@@ -1,12 +1,15 @@
 @use "../../scss/" as *;
-section {
-  height: 100vh;
+#about {
+  height: 90vh;
 
   @include tablet {
-    height: 150vh;
+    margin-bottom: 10rem;
   }
   @include mobile {
-    height: 160vh;
+    margin-bottom: 35rem;
+  }
+  @include mobilesmall {
+    margin-bottom: 30rem;
   }
 }
 .about__container {

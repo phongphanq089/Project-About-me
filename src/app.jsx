@@ -12,7 +12,6 @@ const App = () => {
   return (
     <div>
       <Header />
-
       <About />
       <Experiences />
       <Services />

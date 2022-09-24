@@ -1,3 +1,62 @@
-.my_servieces {
+@use "../../scss/" as *;
+.servieces {
   height: 100vh;
+}
+.servieces__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  padding: 0 3rem;
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    margin: auto;
+  }
+  @include mobile {
+    width: 80%;
+    grid-template-columns: 1fr;
+  }
+  .services {
+    background-color: $color-bg-variant;
+    border-radius: 0 0 2rem 2rem;
+    height: fit-content;
+    transition: $transition;
+    @include tablet {
+      height: auto;
+    }
+    &:hover {
+      background-color: transparent;
+      border: 1px solid #fff;
+      cursor: default;
+    }
+    .service__head {
+      background-color: $color-primary;
+      padding: 2rem;
+      border-radius: 0 0 2rem 2rem;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+      h3 {
+        text-align: center;
+        color: $color-bg;
+        font-size: 1rem;
+      }
+    }
+    .service__list {
+      padding: 1rem 2rem;
+      li {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 0.7rem;
+
+        .service-icon {
+          color: $color-primary;
+          font-size: 2rem;
+          font-weight: bold;
+        }
+        p {
+          color: $color-light;
+        }
+      }
+    }
+  }
 }

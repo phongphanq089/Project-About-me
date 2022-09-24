@@ -12,6 +12,25 @@
     @content;
   }
 }
+@mixin mobile {
+  @media only screen and (max-width: 600px) {
+    .container {
+      width: $content-width-ms;
+    }
+    section {
+      margin-top: 2rem;
+    }
+    @content;
+  }
+}
+@mixin mobilesmall {
+  @media only screen and (max-width: 412px) {
+    section {
+      margin-top: 2rem;
+    }
+    @content;
+  }
+}
 /* reponsive tablet medium  devices */
 @mixin tablet {
   @media only screen and (max-width: 1024px) {
