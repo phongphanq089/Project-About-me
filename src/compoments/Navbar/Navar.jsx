@@ -23,11 +23,11 @@ const Navar = () => {
                 </div>
 
                 <div className="list_menu" ref={navRef}>
-                    <h2 className='home'><Link to='/' span={true} smooth={true}>HOME</Link></h2>
-                    <h2 className='about'><Link to='about' span={true} smooth={true}>ABOUT ME</Link></h2>
-                    <h2 className='my_experience' ><Link to='experience' span={true} smooth={true}>MY EXPERIENCE</Link></h2>
-                    <h2 className='my_service'><Link to='servieces' span={true} smooth={true}>MY SERVICE</Link></h2>
-                    <div className='contact_me '><Link to='contact' span={true} smooth={true}>LET CONTACT</Link> </div>
+                    <h2 className='home'><Link to='/' smooth={true}>HOME</Link></h2>
+                    <h2 className='about'><Link to='about' smooth={true}>ABOUT ME</Link></h2>
+                    <h2 className='my_experience' ><Link to='experience' smooth={true}>MY EXPERIENCE</Link></h2>
+                    <h2 className='my_service'><Link to='servieces' smooth={true}>MY SERVICE</Link></h2>
+                    <div className='contact_me '><Link to='contact' smooth={true}>LET CONTACT</Link> </div>
                     <div className='closeMenu' onClick={showNavbar}><AiOutlineClose /></div>
                 </div>
                 <div className='menuNabar' onClick={showNavbar}><AiOutlineMenuFold /></div>

@@ -3,13 +3,12 @@ import "./header.scss"
 import { AiOutlineArrowDown } from "react-icons/ai"
 import Me from "../../accsets/phongphan.jpg"
 import Cta from './Cta.jsx'
-import Navar from '../Navbar/Navar'
 import HeaderSociel from './headerSociel'
 import Typical from "react-typical"
 const Header = () => {
   return (
     <>
-      <Navar />
+
       <header id='/'>
         <div className="container header_container" >
           <div className="content">
