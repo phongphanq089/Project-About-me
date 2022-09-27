@@ -1,248 +1,53 @@
 @use "../../scss/" as *;
-
 .Nav_bar {
-  @include flex(center, unset);
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 99;
-  transition: height 0.3s ease, background-color 0.3s ease;
+  background: rgba($color: #000000, $alpha: 0.3);
+  width: fit-content;
+  bottom: 5px;
+  border-radius: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 3rem;
+  z-index: 999;
 
-  &.active {
-    height: 5rem;
-    background: $color-bg;
-    box-shadow: rgba(198, 198, 206, 0.25) 0px 50px 100px -20px,
-      rgba(221, 210, 210, 0.3) 0px 30px 60px -30px,
-      rgba(207, 214, 221, 0.35) 0px -2px 6px 0px inset;
-  }
-  .navbar_menu {
-    @include flex(center, space-between);
-    gap: 20rem;
-    padding: 1rem 4rem;
-    
-    .menuNabar{
-      display: none;
-    }
-    .closeMenu{
-      display: none;
-    }
-    .logo {
-      width: 7rem;
-      height: 3rem;
-      border-radius: 1rem;
-      box-shadow: $box-shadow-linear;
-      img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-        border-radius: 1rem;
+  .nav__list {
+    display: flex;
+    position: relative;
+    width: fit-content;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    .nav_item {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      &.active .icon {
+        transform: translateY(-35px);
+        background-color: #1e293b;
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
       }
-    }
-    .list_menu {
-      @include flex(center, space-between);
-      gap: 3rem;
-      height: 4rem;
-      transition: all 0.4s ease;
-    
-
-      h2 {
-        font-size: 1rem;
-        font-weight: bold;
-        padding-top: 5px;
-        transition: all 0.5s ease-in-out;
-
-        &:hover {
-          color: rgb(90, 22, 227);
-          
-        }
+      &.active .text {
+        opacity: 1;
       }
-      .contact_me {
-        @include flex(center, center);
-        gap: 1rem;
-        font-weight: bold;
-        border: 1px solid $color-primary;
-        padding: 0 2rem;
-        color: $color-primary;
-        border-radius: 5px;
-
-        &:hover {
-          color: $color-white;
-          border: 1px solid $color-white;
-        }
-        i {
-          font-size: 1.5rem;
-          font-weight: bold;
-          margin-top: 4px;
-        }
+      .icon {
+        line-height: 70px;
+        font-size: 1.5rem;
+        transition: 0.5s;
+        position: relative;
+        text-align: center;
       }
-    }
-  }
-}
-
-// ===== media tablet pro ===== ///////
-@media screen and (min-width: 1024px) {
-  .Nav_bar {
-    .navbar_menu {
-      gap: 20rem;
-      .list_menu{
-        gap: 2rem;
-      }
-    }
-  }
-}
-@media (max-width: 1025px) and (max-width: 1336px) {
-    .Nav_bar{
-      .navbar_menu{
-       gap: 10rem;
-       display: flex;
-       justify-content: space-around;
-      }
-    }
-}
-
-// ===== media tablet small ==== ///
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .Nav_bar {
-    
-    .navbar_menu {
-      .menuNabar{
-        display: block;
-        font-size: 3rem;
+      .text {
         position: absolute;
-        line-height: normal;
-        font-weight: bold;
-         
-        &:hover {
-          color: aqua;
-        }
+        transform: translateY(100%);
+        transition: 0.5s;
+        opacity: 0;
       }
-      .closeMenu{
-        display: block;
-        position: absolute;
-        font-size: 2.5rem;
-        padding: 0 2rem;
-        top: 1rem;
-        left: 5px;
-
-        &:hover{
-          color: aqua;
-        }
-
-      }
-      .list_menu{
-      
-        flex-direction: column;
-        justify-content: flex-start;
-          gap: 5px;
-          align-items: flex-start;
-          transform: translateX(100%);
-          position: fixed;
-         background: #000;
-         right: 0rem;
-         width: 70%;
-         height: 800px;
-         top: 0rem;
-         padding: 4rem 5rem;
-         border-radius: 1rem;
-         
-         h2 {
-          padding: 2rem 0;
-          font-size: 2rem;
-         }
-           .contact_me{
-           margin-top: 2rem;
-            padding: 1rem  ;
-            font-size: 2rem;
-           } 
-      }
-
-      .reponsive_nav{
-        transform: translateX(0);
-      }
-      gap: 10rem;
     }
   }
-}
-@media screen and (max-width: 768px)  {
-  .Nav_bar {
-    
-    .navbar_menu {
-      .menuNabar{
-        display: block;
-        font-size: 3rem;
-        position: absolute;
-        right: 3rem;
-        top: 2px;
-        line-height: normal;
-        font-weight: bold;
-
-        &:hover {
-          color: aqua;
-        }
-      }
-      .closeMenu{
-        display: block;
-        position: absolute;
-        font-size: 2.5rem;
-        padding: 0 2rem;
-        top: 1rem;
-        left: 5px;
-
-        &:hover{
-          color: aqua;
-        }
-
-      }
-      .list_menu{
-      
-        flex-direction: column;
-        justify-content: flex-start;
-          gap: 5px;
-          align-items: flex-start;
-          transform: translateX(100%);
-          position: fixed;
-         background: #000;
-         right: 0rem;
-         width: 70%;
-         height: 800px;
-         top: 0rem;
-         padding: 4rem 5rem;
-         border-radius: 1rem;
-         
-         h2 {
-          padding: 2rem 0;
-          font-size: 2rem;
-         }
-           .contact_me{
-           margin-top: 2rem;
-            padding: 1rem  ;
-            font-size: 2rem;
-           } 
-      }
-
-      .reponsive_nav{
-        transform: translateX(0);
-      }
-      gap: 10rem;
-    }
-  }
-}
-
-@media screen and (max-width : 420px) {
-      .Nav_bar{
-         .navbar_menu{
-          .list_menu{
-            width: 90%;
-             h2 {
-              padding: 1rem;
-              font-size: 1.5rem;
-             }
-             .contact_me{
-              padding: 0.5rem;
-             }
-          }
-         }
-      }
 }
