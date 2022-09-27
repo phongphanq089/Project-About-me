@@ -12,19 +12,9 @@
     @content;
   }
 }
-@mixin mobile {
-  @media only screen and (max-width: 600px) {
-    .container {
-      width: $content-width-ms;
-    }
-    section {
-      margin-top: 2rem;
-    }
-    @content;
-  }
-}
+
 @mixin mobilesmall {
-  @media only screen and (max-width: 412px) {
+  @media only screen and (max-width: 415px) {
     section {
       margin-top: 2rem;
     }
@@ -40,6 +30,17 @@
 
     section {
       margin-top: 6rem;
+    }
+    @content;
+  }
+}
+@mixin ipad {
+  @media only screen and (max-width: 768px) {
+    .container {
+      width: $content-width-ms;
+    }
+    section {
+      margin-top: 2rem;
     }
     @content;
   }

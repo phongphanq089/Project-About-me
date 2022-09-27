@@ -1,11 +1,13 @@
 @use "../../scss/" as *;
 
 footer {
-  background-color: $color-primary;
+  background-image: linear-gradient( 109.6deg,  rgba(209,0,116,1) 11.2%, rgba(110,44,107,1) 91.1% );
   padding: 3rem 0;
   text-align: center;
   font-size: 0.9rem;
   margin-top: 7rem;
+  border-top-left-radius: 25%;
+  border-top-right-radius: 25%;
   a {
     color: $color-bg;
   }

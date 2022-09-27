@@ -5,7 +5,7 @@ import { Link } from "react-scroll"
 import "./footer.scss"
 const Footer = () => {
   return (
-    <footer>
+    <footer id='footer'>
       <a href='/' className='footer__logo' rel="noopener noreferrer">PHONG PHAN</a>
 
       <ul className='parmalink'>
