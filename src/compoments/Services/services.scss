@@ -16,6 +16,9 @@
     width: 80%;
     grid-template-columns: 1fr;
   }
+  @include mobilesmall {
+    width: 100%;
+  }
   .services {
     background-color: $color-bg-variant;
     border-radius: 0 0 2rem 2rem;

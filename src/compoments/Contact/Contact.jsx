@@ -20,6 +20,7 @@ const Contact = () => {
   };
   return (
     <section id='contact'>
+      <div className="blur blur-contact"></div>
       <h5>Get In Touh</h5>
       <h2>Contact Me</h2>
 

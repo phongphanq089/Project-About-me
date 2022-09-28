@@ -1,5 +1,13 @@
 @use "../../scss/" as *;
-
+section {
+  position: relative;
+  .blur-about {
+    width: 40rem;
+    height: 50rem;
+    // right: 50%;
+    transform: translateX(50%);
+  }
+}
 .experiences__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -24,8 +32,12 @@
       margin: auto;
     }
     @include mobile {
-      font-size: x-small;
+      width: 90%;
       padding: 1rem 2rem;
+    }
+    @include mobilesmall {
+      padding: 1rem 1rem;
+      width: 100%;
     }
 
     &:hover {

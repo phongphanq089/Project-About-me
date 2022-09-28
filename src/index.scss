@@ -20,10 +20,13 @@
   display: none;
 }
 body {
-  background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%, rgba(7,3,53,1) 97.5% );
+  background-image: radial-gradient(
+    circle 610px at 5.2% 51.6%,
+    rgba(5, 8, 114, 1) 0%,
+    rgba(7, 3, 53, 1) 97.5%
+  );
   color: $color-white;
   //  background-image: url(../src/accsets/bg-texture.png);
-    
 }
 
 /* ==========GENERAL STYLE  ======== */
@@ -91,4 +94,12 @@ img {
   display: block;
   width: 100%;
   object-fit: cover;
+}
+
+.blur {
+  background-color: rgba(182, 25, 218, 0.7);
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(200px);
+  z-index: -1;
 }

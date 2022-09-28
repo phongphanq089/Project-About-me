@@ -1,184 +1,178 @@
 @use "../../scss/" as *;
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap");
 
 header {
+  background-image: url(../../accsets/banner-bg.png);
+  // border-bottom-left-radius: 15%;
+  // border-bottom-right-radius: 15%;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 88%);
 
-     background-image: url(../../accsets/banner-bg.png);
-     border-bottom-left-radius: 15%;
-     border-bottom-right-radius: 15%;
+  @include tablet {
+    height: fit-content;
+  }
 
-     @include tablet {
-          height: fit-content;
-     }
-
-     @include mobile {
-          height: fit-content;
-     }
+  @include mobile {
+    height: fit-content;
+  }
 }
 
 .container.header_container {
-     width: 80%;
-     display: grid;
-     grid-template-columns: 60% 35%;
-     gap: 5%;
-     padding: 5rem 0;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 60% 35%;
+  gap: 5%;
+  padding: 10rem 0;
 
-     @include tablet {
-          margin-left: 2rem;
-     }
+  @include tablet {
+    margin-left: 2rem;
+  }
 
-     @include ipad {
-          width: 60%;
-          font-size: x-small;
-     }
-     @include mobile {
-          grid-template-columns: 1fr;
-          margin: auto;
-          width: 80%;
-          
-     }
-     @include mobilesmall {
-          width: 90%;
-     }
+  @include ipad {
+    width: 60%;
+    font-size: x-small;
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
+    margin: auto;
+    width: 80%;
+    padding-top: 5rem;
+  }
+  @include mobilesmall {
+    width: 90%;
+  }
 
-     .about__me {
-          @include mobile {
-               text-align: center;
-               margin-bottom: 2rem;
-          }
+  .about__me {
+    @include mobile {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    @include ipad {
+      font-size: x-small;
+      margin-right: 1rem;
+    }
+
+    .button-btn {
+      padding: 0.5rem 1rem;
+      border-radius: 1rem;
+      background-image: linear-gradient(135deg, #f761a1 10%, #8c1bab 100%);
+    }
+
+    .text {
+      .firt_text {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        @include mobile {
+          justify-content: center;
+        }
+        @include ipad {
+          font-size: 1rem;
+          gap: 0.5rem;
+        }
+
+        p {
+          font-family: "Caveat", cursive;
+          color: #f87171;
+          font-size: 2.5rem;
+          margin-top: 6px;
           @include ipad {
-               font-size: x-small;
-               margin-right: 1rem;
+            font-size: 1.5rem;
           }
+        }
+      }
+    }
 
-          .button-btn {
-               padding: 0.5rem 1rem;
-               border-radius: 1rem;
-               background-image: linear-gradient(135deg, #F761A1 10%, #8C1BAB 100%);
-          }
+    p {
+      font-family: "Caveat", cursive;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
 
-          .text {
-               .firt_text {
-                    display: flex;
-                    gap: 1rem;
-                    align-items: center;
-                    @include mobile {
-                         justify-content: center;
-                    }
-                    @include ipad {
-                       font-size: 1rem;
-                       gap: 0.5rem;          
-                    }
+    .CTA {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      @include mobile {
+        justify-content: center;
+      }
+      .btn {
+        padding: 0.5rem;
+      }
 
-                    p {
-                         font-family: 'Caveat', cursive;
-                         color: #f87171;
-                         font-size: 2.5rem;
-                         margin-top: 6px ;
-                         @include ipad {
-                              font-size: 1.5rem;
-                         }
-                    }
-               }
-          }
+      .btn.btn-primary {
+        padding: 0.3rem;
+      }
 
-          p {
-               font-family: 'Caveat', cursive;
-               font-size: 1.2rem;
-               margin-bottom: 1rem;
-          }
+      .scroll__down {
+        display: flex;
+        align-items: center;
+        gap: 3px;
 
-          .CTA {
-               display: flex;
-               gap: 2rem;
-               align-items: center;
-               @include mobile {
-                   justify-content: center;
-                   
-               }
-               .btn {
-                    padding: 0.5rem;
-               }
+        .icon {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
 
-               .btn.btn-primary {
-                    padding: 0.3rem;
-               }
+  //     image me
+  .image-me {
+    width: 350px;
+    height: 400px;
+    margin: auto 0;
+    border-radius: 10px;
+    position: relative;
 
-               .scroll__down {
-                    display: flex;
-                    align-items: center;
-                    gap: 3px;
+    @include ipad {
+      width: 300px;
+      height: 350px;
+      margin-left: 2rem;
+    }
+    @include mobilesmall {
+      width: 70%;
+      margin: auto;
+    }
+    @include mobile {
+      margin: auto;
+    }
 
-                    .icon {
-                         font-size: 2rem;
-                    }
-               }
-          }
+    &::after {
+      content: "";
+      position: absolute;
+      height: 80px;
+      width: 80px;
+      border-bottom: 5px solid #f87171;
+      border-right: 5px solid #f87171;
+      right: -2rem;
+      bottom: 1rem;
+    }
 
-     }
+    &::before {
+      content: "";
+      position: absolute;
+      height: 80px;
+      width: 80px;
+      border-top: 5px solid #f87171;
+      border-left: 5px solid #f87171;
+      left: -2rem;
+      top: -2rem;
+    }
 
-     //     image me
-     .image-me {
-          width: 350px;
-          height: 400px;
-          margin: auto 0;
-          border-radius: 10px;
-          position: relative;
+    img {
+      border-radius: 10px;
+      object-fit: cover;
+    }
 
-          @include ipad {
-               width: 300px;
-               height: 350px;
-               margin-left: 2rem;
-          }
-          @include mobilesmall {
-                width: 70%;
-                margin: auto;
-          }
-          @include mobile {
-               margin: auto;
-          }
-     
+    .header_social {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 0;
 
-          &::after {
-               content: "";
-               position: absolute;
-               height: 80px;
-               width: 80px;
-               border-bottom: 5px solid #f87171;
-               border-right: 5px solid #f87171;
-               right: -2rem;
-               bottom: 1rem;
-
-          }
-
-          &::before {
-               content: "";
-               position: absolute;
-               height: 80px;
-               width: 80px;
-               border-top: 5px solid #f87171;
-               border-left: 5px solid #f87171;
-               left: -2rem;
-               top: -2rem;
-          }
-
-          img {
-               border-radius: 10px;
-               object-fit: cover;
-          }
-
-          .header_social {
-               position: absolute;
-               display: flex;
-               align-items: center;
-               gap: 1rem;
-               padding: 1rem 0;
-
-               &:hover a {
-                    color: #F761A1;
-               }
-          }
-
-     }
-
+      &:hover a {
+        color: #f761a1;
+      }
+    }
+  }
 }

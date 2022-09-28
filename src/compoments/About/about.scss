@@ -1,15 +1,27 @@
 @use "../../scss/" as *;
 #about {
-  height: 90vh;
-
+  height: fit-content;
+  position: relative;
+  .blur-about {
+    width: 22rem;
+    height: 30rem;
+    right: 1rem;
+    top: 0;
+  }
+  .blur-about-right {
+    width: 22rem;
+    height: 30rem;
+    left: 1rem;
+    top: 0;
+  }
   @include tablet {
-    margin-bottom: 10rem;
+    margin-bottom: 20rem;
   }
   @include mobile {
-    margin-bottom: 35rem;
+    margin-bottom: 20rem;
   }
   @include mobilesmall {
-    margin-bottom: 30rem;
+    margin-bottom: 20rem;
   }
 }
 .about__container {
@@ -38,6 +50,7 @@
       overflow: hidden;
       transform: rotate(10deg);
       transition: $transition;
+
       &:hover {
         transform: rotate(0deg);
       }
@@ -57,7 +70,7 @@
   .about__content {
     .about__carts {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 1.5rem;
       @include mobile {
         grid-template-columns: 1fr 1fr;
@@ -66,7 +79,7 @@
       .about_cart {
         background: $color-bg-variant;
         border-radius: 1rem;
-        padding: 2rem;
+        padding: 1rem;
         border: 1px solid transparent;
         text-align: center;
 
@@ -90,11 +103,53 @@
         }
       }
     }
+    .about__me-cart {
+      margin: 1rem 1rem 0 1rem;
+      background-color: #581c87;
+      border-radius: 2rem;
+      transition: 0.5s;
+      padding: 1rem 2rem;
+      width: 100%;
+      &:hover {
+        background-color: transparent;
+        border: 1px solid #a21caf;
+      }
+
+      @include tablet {
+        margin: 1rem auto;
+        width: 100%;
+        text-align: center;
+      }
+      .bs-icon {
+        font-size: 1.5rem;
+      }
+      .backgound__cart {
+        .backgound__cart-item {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          @include tablet {
+            justify-content: center;
+          }
+          h6 {
+            font-weight: 500;
+            font-size: 1rem;
+          }
+          small {
+            font-size: 0.9rem;
+            color: $color-light;
+          }
+        }
+      }
+    }
     p {
       margin: 2rem 0.95rem;
       font-size: 0.8rem;
       color: $color-light;
 
+      @include tablet {
+        text-align: center;
+      }
       @include mobile {
         margin: 1.5rem 0;
       }
