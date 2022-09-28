@@ -7,13 +7,20 @@
     height: 30rem;
     right: 1rem;
     top: 0;
+    @include tablet {
+      width: 20%;
+    }
   }
   .blur-about-right {
     width: 22rem;
     height: 30rem;
     left: 1rem;
     top: 0;
+    @include tablet {
+      width: 20%;
+    }
   }
+
   @include tablet {
     margin-bottom: 20rem;
   }

@@ -5,6 +5,10 @@ section {
     width: 30rem;
     height: 40rem;
     transform: translateX(25%);
+    @include tablet {
+      width: 30%;
+      right: 2rem;
+    }
   }
 }
 .container.contact__container {

@@ -4,8 +4,14 @@ section {
   .blur-about {
     width: 40rem;
     height: 50rem;
-    // right: 50%;
     transform: translateX(50%);
+    position: absolute;
+  }
+  @include tablet {
+    .blur-about {
+      width: 30%;
+      left: 2rem;
+    }
   }
 }
 .experiences__container {
