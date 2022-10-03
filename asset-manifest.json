@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "./static/css/main.a3205769.css",
-    "main.js": "./static/js/main.52b08cc6.js",
+    "main.js": "./static/js/main.40e8a651.js",
     "static/media/phongphan.jpg": "./static/media/phongphan.c1b8eb18a5b5168d7637.jpg",
     "static/media/cv.pdf": "./static/media/cv.1676dcdc83730930d888.pdf",
+    "static/media/web_food.png": "./static/media/web_food.33ae5d57c944b3c3d045.png",
     "static/media/image_.jpg": "./static/media/image_.37cd0267f8de96c4b7b1.jpg",
-    "static/media/portfolio5.png": "./static/media/portfolio5.a82ae9a163c1ac5e3a07.png",
+    "static/media/app_music.jpg": "./static/media/app_music.3a97a39315d25014c118.jpg",
+    "static/media/About-me.png": "./static/media/About-me.d3732844378ea8bfa957.png",
+    "static/media/gym_web.jpg": "./static/media/gym_web.c6505305d3e0e0949a60.jpg",
     "static/media/banner-bg.png": "./static/media/banner-bg.cc1273af450504afe755.png",
-    "static/media/portfolio2.jpg": "./static/media/portfolio2.ae187bc4e43ae6dbc263.jpg",
-    "static/media/portfolio6.jpg": "./static/media/portfolio6.72d1107e313049cf15a7.jpg",
-    "static/media/portfolio1.jpg": "./static/media/portfolio1.f5e72352e5aa840702b8.jpg",
-    "static/media/portfolio3.jpg": "./static/media/portfolio3.cbab42559fe73e73906f.jpg",
-    "static/media/portfolio4.jpg": "./static/media/portfolio4.6bf60cbb8fe5f7d7af5d.jpg",
+    "static/media/exercises_gym.jpg": "./static/media/exercises_gym.7141db63610167bd48b5.jpg",
+    "static/media/Movies_film.jpg": "./static/media/Movies_film.6ccb0f6b16e60b0271ea.jpg",
     "index.html": "./index.html",
     "main.a3205769.css.map": "./static/css/main.a3205769.css.map",
-    "main.52b08cc6.js.map": "./static/js/main.52b08cc6.js.map"
+    "main.40e8a651.js.map": "./static/js/main.40e8a651.js.map"
   },
   "entrypoints": [
     "static/css/main.a3205769.css",
-    "static/js/main.52b08cc6.js"
+    "static/js/main.40e8a651.js"
   ]
 }
